@@ -1,0 +1,13 @@
+{
+    "java.project.sourcePaths": [
+        "exercicis_repas_temes_1_4",
+        "Unitat5",
+        "Unitat4",
+        "Unitat3",
+        "Unitat2",
+        "Unitat1",
+        "ejercicios_examen_29112023",
+        "ejercicios"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}

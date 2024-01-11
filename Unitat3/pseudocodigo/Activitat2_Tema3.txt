@@ -1,0 +1,46 @@
+ /* Fes un programa que demani un nombre n i calculi els nombre primers entre 1 i n. 
+Un nombre primer és el que només és divisible per 1 i per ell mateix. */
+
+Algoritmo Activitat2_Tema3_voluntaries
+	
+	main() {
+
+		int n = 0; // declaración e inicialización de las variables
+
+		print("Introduzca número: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA HORAS
+		n = input();
+
+		// COMO EL ENUNCIADO NO LO ESPECIFICA, SUPONEMOS QUE NO ES NECESARIA VALIDACIÓN DE INPUT YA QUE EL USUARIO
+		// INTRODUCE VALORES CORRECTOS PARA CADA VARIABLE (EN ESTE CASO N >= 1)
+
+
+		// ESTRUCTURA DE CONTROL FOR ANIDADO PARA RECORRER VALORES DE 1 A n
+
+		for (int i=1; i <= n; i++) { // RECORREMOS CADA VALOR DE 1 A N
+
+			for (int j = 1, j <= i; j++) { // PARA CADA ITEM DENTRO DE N RECORREMOS DESDE 1 HASTA VALOR I
+
+				int contadorPrimers = 0;
+
+				if (j != 1 && j!= i && (i % j != 0)){ // SI ES DIVISIBLE POR 1 Y POR EL MISMO Y EL RESTO NO ES CERO SERIA NO PRIMER, COMO NOS INTERESA SABER SI ES PRIMER
+
+					NEGAMOS LA CONDICION PARA HACERLA VERDADERA CUANDO I SEA PRIMER
+
+					contadorPrimers++;
+				}
+			}
+
+			print (i +" contiene " + contadorPrimers + " nombres primers.");
+
+
+		}
+
+
+		// MOSTRAMOS POR PANTALLA EL VALOR DE "area".
+
+		print("Nueva hora: " + horas + " horas " + minutos + " minutos y " + segundos + " segundos." );
+
+	} 
+
+
+FinAlgoritmo

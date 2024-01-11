@@ -1,0 +1,58 @@
+ /* Tenim un client que és una granja i vol saber cada día si té prou menjar al magatzem per alimentar als animals. 
+ Ens demanen fer un programa que ens demani: els kilograms de pinso que hi ha al magatzem, el nombre d’animals que han de menjar, 
+ i la quantitat (en kilos) de menjar que hem de donar a cada animal.
+
+El programa ha de determinar si hi ha prou menjar per alimentar els animals. En cas que no n’hi hagi prou, 
+el programa ens ha de determinar quants kilos podem donar a cada animal.
+
+Nota: evitar que l’aplicació faci divisions per zero.  */
+
+Algoritmo Activitat3_Tema2_voluntaries
+	
+	main() {
+
+		// declaración e inicialización de las variables
+
+		float quantitatPinso = 0, quantitatKilosAnimal = 0, quantitatPinsoNecesaria= 0, quantitatSobrant = 0;
+		int nombreAnimals = 0
+
+		print("Introduzca cantidad pinso: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA QUANTITATPINSO
+		quantitatPinso = input();
+		print("Introduzca numero total de animales en la granja: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA NOMBREANIALS
+		nombreAnimals = input();
+		print("Introduzca numero a consumir por animal: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA QUANTITATKILOSANIMAL
+		quantitatKilosAnimal = input();
+
+		// COMO EL ENUNCIADO NO MENCIONA VALIDACIÓN SUPONEMOS QUE EL VALOR INTRODUCE INPUTS ACORDE A LA NATURALEZA DE CADA VARIABLE (QUANTITAT PINSO MAYOR A 0, NUMERO ANIMALES MAYOR A 0, ETC.)
+
+		// CALCULAMOS LA CANTIDAD DE PIENSO NECESARIO EN FUNCIÓN DEL NUMERO DE ANIMALES Y CANTIDAD DE PIENSO NECESARIA POR ANIMALES Y 
+		// ASIGNAMOS VALOR A QUANTITATPINSONECESARIA
+
+		quantitatPinsoNecesaria = quantitatKilosAnimal * nombreAnimals;
+
+		// CALCULAMOS LA CANTIDAD SOBRANTE O NECESARIA
+
+		quantitatSobrant = quantitatPinso - quantitatPinsoNecesaria;
+
+		// ESTABLECEMOS LA ESTRUCTURA CONDICIONAL PARA DETERMINAR SI SOBRA O FALTA PIENSO
+
+		if (quantitatSobrant >= 0) { // SI CANTIDAD DE PIENSO EN ALMACEN ES MAYOR QUE LA NECESARIA, ENTONCES MOSTRAMOS LA CANTIDAD SOBRANTE
+
+
+			print("Nos sobran " + quantitatSobrant); // MOSTRAMOS EN PANTALLA LA CANTIDAD SOBRANTE
+
+		} else { // SI CANTIDAD DE PIENSO EN ALMACÉN ES MENOR A LA NECESARIA, PARA DETERMINAR CUANTOS KILOS DE PIENSO
+				// PODEMOS DAR POR ANIMAL SIMPLEMENTE DIVIDIMOS LA CANTIDAD DE PIENSO EN ALMACEN ENTRE EL NUMERO DE ANIMALES EN GRANJA
+ 
+
+			quantitatKilosAnimal = quantitatPinso / nombreAnimals;
+
+			print("Podemos dar " + quantitatKilosAnimal + "kilogramos de pienso por animal."); // MOSTRAMOS EN PANTALLA LA CANTIDAD 
+			MÁXIMA QUE PODEMOS DAR A CADA ANIMAL.
+
+		}
+
+	} 
+
+
+FinAlgoritmo

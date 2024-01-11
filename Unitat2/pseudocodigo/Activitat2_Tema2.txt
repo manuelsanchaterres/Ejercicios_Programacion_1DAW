@@ -1,0 +1,24 @@
+ /* Utilitza l’operador ternari per a calcular el valor 
+ absolut d’un nombre que demani a l’usuari per teclat.  */
+
+Algoritmo Activitat2_Tema2_voluntaries
+	
+	main() {
+
+		float nombre = 0; // declaración e inicialización de las variables
+
+		print("Introduzca nombre: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA NOMBRE
+		nombre = input();
+
+		// OPERADOR TERNARIO (SI NOMBRE INTRODUCIDO ES POSITIVO O 0 SE DEVUELVE NOMBRE, SI ES NEGATIVO SE DEVUELVE -NOMBRE (-1 * NOMBRE))
+		// EL VALOR DE RETORNO SE ASIGNA A LA VARIABLE "valorAbsolut".
+		int valorAbsolut = nombre >=0 ? nombre : -nombre;
+
+		// MOSTRAMOS POR PANTALLA EL VALOR DE "valorAbsolut".
+
+		print("El valor absolut de " + nombre + " es igual a " + valorAbsolut + "."); // CONCATENAMOS EL STRING CON EL VALOR DE "valorAbsolut".
+
+	} 
+
+
+FinAlgoritmo

@@ -1,0 +1,66 @@
+ /* Fes una aplicació que demani a l’usuari un número comprès entre 0 i 9999. L’aplicació ha de determinar 
+ si el nombre és capicúa.
+
+Notes:
+No es pot utilitzar cap propietat de l’objecte String (no vist a classe).
+Pot ser útil utilitzar operand mòdul (%).*/
+
+Algoritmo Activitat5_Tema2_voluntaries
+	
+	main() {
+
+		// declaración e inicialización de las variables
+
+		byte unitatsMillar=0, centenes = 0, decenes = 0, unitats = 0;
+		int numeroOriginal = 0, numeroModificado;
+		boolean capicua = false;
+		print("Introduzca número: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA NUMERO
+		numero = input();
+
+		// COMO EL ENUNCIADO NO MENCIONA VALIDACIÓN SUPONEMOS QUE EL VALOR INTRODUCE INPUTS ACORDE A LA NATURALEZA DE CADA VARIABLE (NUMEROS ENTRE 0 I 9999)
+
+		// PROCESO OBTENCIÓN UNITATSMILLAR, CENTENES, DECENES I UNITATS
+		numeroModificado = numeroOriginal; // ASIGNACIÓN A NUEVA VARIABLE PARA PODER IMPRIMIR PANTALLA AL FINAL DE LA EJECUCIÓN EL NÚMERO ORIGINAL INTRODUCIDO.
+		unitats = numeroModificado % 10; // EL RESTO DE NUMERO ENS DONA LA POSICIÓ UNITATS (EXEMPLE: 8888 % 10 = 888*10 + 8 UNITATS)
+		numeroModificado /=10; // AL DIVIDIR POR 10 NUMERO Y AL SER ENTERO EL VALOR DE NÚMERO SERÍA 888
+		decenes = numeroModificado % 10; // DE NUEVO EL RESTO DE ESTA OPERACIÓN EQUIVALE A LA POSICIÓN DECENES DE NUESTRO NUMERO ORIGINAL ( 888% 10 = (88 * 10) + 8 DECENES)
+		numeroModificado /=10; // AL DIVIDIR POR 10 NUMERO Y AL SER ENTERO EL VALOR DE NÚMERO SERÍA 88
+		centenes = numeroModificado % 10; // DE NUEVO EL RESTO DE ESTA OPERACIÓN EQUIVALE A LA POSICIÓN CENTENES DE NUESTRO NUMERO ORIGINAL ( 88 % 10 = (8 * 10) + 8 CENTENES)
+		numeroModificado /=10; // AL DIVIDIR POR 10 NUMERO Y AL SER ENTERO EL VALOR DE NÚMERO SERÍA 8 COMO EN ESTE CASO NUESTRO NUMERO CONSTA DE 5 CIFRAS ESTE ULTIMO VALOR
+		unitatsMillar = numeroModificado // CORRESPONDE A LA POSICIÓN UNITATSMILLAR DE NUESTRO NUMERO ORIGINAL
+
+		// ESTRUCTURA DE CONTROL CONDICIONAL PARA DETERMINAR SI EL NUMERO ORIGINAL ES CAPICUA SEGUN EL NUMERO DE DIGITOS DE NUMERO
+
+		if (unitatsMillar = 0 && centenes == 0 && decenes == 0) { // NUMEROS DE 1 DÍGITO
+
+			capicua = true;
+
+		} else if (unitatsMillar == 0 && centenes == 0 && decenes == unitats) { // NUMEROS DE 2 DÍGITOS
+
+			capicua = true;
+
+		} else if (unitatsMillar == 0 && centenes == unitats) { // NUMEROS DE 3 DÍGITOS
+
+			capicua = true;
+
+		} else if (unitatsMillar == unitats && centenes == decenes) { // NUMEROS DE 4 DÍGITOS
+
+			capicua = true;
+		}
+
+		// SI CAPICUA ES TRUE MOSTRAMOS "ES CAPICUA", SI FALSE MOSTRAMOS "NO ES CAPICUA"
+		
+		if (capicua) {
+
+			print(numero + " es capicua.");
+
+		} else {
+
+			print(numero + " no es capicua.");
+
+		}
+
+	} 
+
+
+FinAlgoritmo

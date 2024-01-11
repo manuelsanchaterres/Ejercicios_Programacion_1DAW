@@ -1,0 +1,37 @@
+ /* Per a dos nombres a i b, és possible buscar el màxim comú divisor (el nombre més gran que els divideix a tots dos) 
+amb un algorisme ineficient, però senzill: des del menor entre a i b, anar cercant de manera decreixent 
+el primer nombre que divideix als dos simultàniament amb resta zero. Fes un programa que busqui el MCD de dos nombres. */
+
+Algoritmo Activitat3_Tema3_voluntaries
+	
+	main() {
+
+		int nombre1 = 0, nombre2= 0; // declaración e inicialización de las variables
+
+		print("Introduzca número 1: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA NOMBRE1
+		nombre1 = input();
+		print("Introduzca número 2: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA NOMBRE2
+		nombre2 = input();
+		// COMO EL ENUNCIADO NO LO ESPECIFICA, SUPONEMOS QUE NO ES NECESARIA VALIDACIÓN DE INPUT YA QUE EL USUARIO
+		// INTRODUCE VALORES CORRECTOS PARA CADA VARIABLE.
+
+
+		int menor = nombre1 < nombre2 ? nombre1 : nombre2;
+
+		// ESTRUCTURA DE CONTROL FOR ANIDADO PARA RECORRER VALORES DESDE MENOR A 1
+
+		for (int i= menor; i >=1; i--) { // RECORREMOS CADA VALOR DE MENOR A 1
+
+			if (numero1 % i == 0 && numero2 % i == 0) {
+
+				print("mcd de " + numero1 + " y " + numero2 + " es igual a: " + i);
+
+				break; // INTRODUCIMOS UN BREAK PARA QUE A LA PRIMERA COINCIDENCIA LA EJECUCIÓN DEL PROGRAMA SALGA DEL BUCLE FOR
+			}
+
+		}
+
+	} 
+
+
+FinAlgoritmo

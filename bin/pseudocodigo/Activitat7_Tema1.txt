@@ -1,0 +1,30 @@
+/Dissenya una aplicaci� que demani a un usuari una quantitat de segons. L?aplicaci� ha de mostrar quantes hores, 
+// minuts i segons hi ha en el nombre de segons introdu�ts per l?usuari. 
+
+Algoritmo Activitat7_Tema1
+	
+	main() {
+
+		int quantitatSegons=0, hores=0, minuts=0, segons=0; 
+		print("Introdueix quantitat de segons: ");
+
+		quantitatSegons = input();
+
+		hores = quantitatSegons / 3600 -> // El valor sencer d'aquesta divisió correspon 
+		al nombre d'hores dins la quantitat introduïda ja que 1 hora és igual a 3600 segons.
+
+
+		minuts = (quantitatSegons % 3600)/60 -> // Él módul ens dona la quantitat residu de quantitat / 3600, dividint aquest residu per 
+		60 ens dona la quantitat de minuts sencers d'aquesta quantitat el qual correspon als minuts dins quantitatSegons.
+
+		segons = (quantitatSegons % 3600) % 60 -> // ens dona el residu en segons després de fer es calcul del minuts sencers dins
+		la quantitatSegons.
+
+		print("A " + quantitatSegons + "segons, tenim: " hores + " hores " + minuts + " minuts i " + segons + " segons.") -> Mostram per pantalla
+
+		Exemple (A 500 segons, tenim: 0 hores 6 minuts i 20 segons)
+		
+	} 
+
+
+FinAlgoritmo

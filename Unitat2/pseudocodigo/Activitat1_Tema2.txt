@@ -1,0 +1,45 @@
+ /* Fes una aplicació que calculi l’àrea del triangle. Abans de fer cap 
+ càlcul ha de comprovar que l’usuari no fiqui valors negatius. */
+
+Algoritmo Activitat1_Tema2_voluntaries
+	
+	main() {
+
+		double base = 0, altura = 0, area = 0; // declaración e inicialización de las variables
+
+		print("Introduzca base del triángulo: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA BASE
+		base = input();
+
+		// MIENTRAS BASE SEA NEGATIVA LE SIGO PREGUNTANDO HASTA QUE INTRODUZCA UN VALOR POSITIVO
+		while (base < 0) {
+
+			print("La base del triángulo no puede ser negativa");
+			print("Introduzca base del triángulo: ");
+			base = input();
+		}
+
+		print("Introduzca altura del triángulo: "); //MOSTRAMOS POR PANTALLA Y CAPTURAMOS INPUT PARA ALTURA
+		altura = input();
+
+		// MIENTRAS ALTURA SEA NEGATIVA LE SIGO PREGUNTANDO HASTA QUE INTRODUZCA UN VALOR POSITIVO
+		while (altura < 0) {
+
+			print("La altura del triángulo no puede ser negativa");
+			print("Introduzca altura del triángulo: ");
+			altura = input();
+		}
+
+
+		// UNA VEZ TENEMOS ASIGNADO EL INPUT A CADA VARIABLE "base" Y "altura" CALCULAMOS EL AREA APLICANDO LA FORMULA DEL TRIANGULO
+		Y ASIGNAMOS EL RESULTADO A LA VARIABLE "area".
+
+		area = (base*altura)/2;
+
+		// MOSTRAMOS POR PANTALLA EL VALOR DE "area".
+
+		print("El area del triángulo es igual a: " + area); // CONCATENAMOS EL STRING CON EL VALOR DE "area".
+
+	} 
+
+
+FinAlgoritmo
