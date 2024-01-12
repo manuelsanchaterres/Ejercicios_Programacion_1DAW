@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "reverseArrayUnKnownLength",
+            "request": "launch",
+            "mainClass": "reverseArrayUnKnownLength",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "reverseArray",
             "request": "launch",
             "mainClass": "reverseArray",
