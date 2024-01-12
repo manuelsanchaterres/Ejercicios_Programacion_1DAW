@@ -35,10 +35,7 @@ public class Main {
         int digitFromNumber = 0;
         int[] reservedNumber = {0};
         if (number == 0) {
-
-
             return reservedNumber;
-
         } else {
             
             for (int i=0; i < reservedNumber.length; i++) {
@@ -51,7 +48,7 @@ public class Main {
 
                 digitFromNumber = (int) number%10;
                 number /=10;
-                /* assign isolated digit to its correspodent position 
+                /* assign isolated digit to its correspondent position 
                 in reservedNumber array*/ 
                 reservedNumber[i] = digitFromNumber;
                 /* create new array by copying the previous array value and increase its dimension (original length 
