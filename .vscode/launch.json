@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "reverseArray",
+            "request": "launch",
+            "mainClass": "reverseArray",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "averageFinder",
+            "request": "launch",
+            "mainClass": "averageFinder",
+            "projectName": "Ejercicios Programacion 1 DAW",
+            "args": [
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "ejercicio1",
+            "request": "launch",
+            "mainClass": "ejercicio1",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "name": "Java Debug",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [
+                "arg1",
+                "arg2"
+            ]
+        }
+    ]
+  }
+  

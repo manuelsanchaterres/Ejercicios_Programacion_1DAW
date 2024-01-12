@@ -9,5 +9,6 @@
 	<classpathentry kind="src" path="Unitat4"/>
 	<classpathentry kind="src" path="Unitat5"/>
 	<classpathentry kind="src" path="ejercicios_varios"/>
+	<classpathentry kind="src" path="codewars"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
