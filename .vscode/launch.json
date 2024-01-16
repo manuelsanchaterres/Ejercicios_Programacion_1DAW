@@ -5,6 +5,13 @@
             "type": "java",
             "name": "reverseArrayUnKnownLength",
             "request": "launch",
+            "mainClass": "reversedArray.reverseArrayUnKnownLength",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "reverseArrayUnKnownLength",
+            "request": "launch",
             "mainClass": "reverseArrayUnKnownLength",
             "projectName": "Ejercicios Programacion 1 DAW"
         },

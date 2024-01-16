@@ -1,6 +1,5 @@
 // https://www.codewars.com/kata/5583090cbe83f4fd8c000051
 package reversedArray;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 public class reverseArray {
@@ -20,21 +19,21 @@ public class reverseArray {
 
         if (number == 0) {
 
-            int[] reservedNumber = {0};
-            return reservedNumber;
+            int[] reversedNumber = {0};
+            return reversedNumber;
 
         } else {
 
-            int[] reservedNumber = new int[5];
+            int[] reversedNumber = new int[5];
 
-            for (int i=0; i < reservedNumber.length; i++) {
+            for (int i=0; i < reversedNumber.length; i++) {
     
                 digitFromNumber = number%10;
                 number /=10;
-                reservedNumber[i] = digitFromNumber;
+                reversedNumber[i] = digitFromNumber;
             }
             
-            return reservedNumber;
+            return reversedNumber;
 
         }
 

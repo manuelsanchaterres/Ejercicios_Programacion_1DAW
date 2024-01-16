@@ -19,28 +19,28 @@ public class reverseArrayUnKnownLength {
 
     //     if (number == 0) {
 
-    //         int[] reservedNumber = {0};
-    //         return reservedNumber;
+    //         int[] reversedNumber = {0};
+    //         return reversedNumber;
 
     //     } else {
 
-    //         int[] reservedNumber = {0};
+    //         int[] reversedNumber = {0};
 
-    //         for (int i=0; i < reservedNumber.length; i++) {
+    //         for (int i=0; i < reversedNumber.length; i++) {
                 
     //             if (number/ 10 == 0){
 
-    //                 reservedNumber[i] = number%10;
+    //                 reversedNumber[i] = number%10;
     //                 break;
     //             }
 
     //             digitFromNumber = number%10;
     //             number /=10;
-    //             reservedNumber[i] = digitFromNumber;
-    //             reservedNumber = Arrays.copyOf(reservedNumber, i + 2);
+    //             reversedNumber[i] = digitFromNumber;
+    //             reversedNumber = Arrays.copyOf(reversedNumber, i + 2);
     //         }
             
-    //         return reservedNumber;
+    //         return reversedNumber;
 
     //     }
 
@@ -52,35 +52,40 @@ public class reverseArrayUnKnownLength {
 
         long number = n;
         int digitFromNumber = 0;
-        int[] reservedNumber = {0};
+        int[] reversedNumber = {0};
         if (number == 0) {
-            return reservedNumber;
+            return reversedNumber;
         } else {
             
-            for (int i=0; i < reservedNumber.length; i++) {
+            for (int i=0; i < reversedNumber.length; i++) {
                 
                 if (number/ 10 == 0){
 
-                    reservedNumber[i] = (int) number%10;
-                    break;
+                    reversedNumber[i] = (int) number%10;
+                    return reversedNumber;
                 }
 
                 digitFromNumber = (int) number%10;
                 number /=10;
                 /* assign isolated digit to its correspondent position 
-                in reservedNumber array*/ 
-                reservedNumber[i] = digitFromNumber;
+                in reversedNumber array*/ 
+                reversedNumber[i] = digitFromNumber;
                 /* create new array by copying the previous array value and increase its dimension (original length 
                 equals (i + 1), new length (i+1) + 1*/ 
-                reservedNumber = Arrays.copyOf(reservedNumber, i + 2);
+                int[] newReversedNumber = reversedNumber;
+                reversedNumber = new int[i+2];
+                for (int j = 0; j < newReversedNumber.length; j++){
+
+                    reversedNumber[j] = newReversedNumber[j];
+
+                }
+                // reversedNumber = Arrays.copyOf(reversedNumber, i + 2);
             }
             
-            return reservedNumber;
+            return reversedNumber;
 
         }
 
     }
 
-    }
-
-  }
+}
