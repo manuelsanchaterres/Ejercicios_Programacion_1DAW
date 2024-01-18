@@ -1,46 +1,66 @@
 package catKata;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class catKata {
     
     public static void main(String[] args) {
         
-        Scanner input = new Scanner(System.in);
-        System.out.print("Introduzca Número Inicial: ");
-        int startNumber = input.nextInt();
-        System.out.print("Introduzca Número Final: ");
-        int endNumber = input.nextInt();
+        // String[] yard = {"------------", "------------", "-L----------", "------------", "------------", "------------"};
+        // String[] yard = {"------------", "---M--------", "------------", "------------", "-------R----", "------------"};
+        // String[] yard = {"-----------L", "--R---------", "------------", "------------", "------------", "--M---------"};
+        String[] yard = {"-----------L", "--R---------", "------M-----", "------------", "------------", "--M---------"};
 
-       System.out.println(dontGiveMeFive(startNumber, endNumber));
+        int minDistance = 10;
 
+        // System.out.println(peacefulYard(yard, minDistance) == true ? "Cats are Safely Distanced on Yard": "Cats are NOT Safely Distanced on Yard");
+        System.out.println(peacefulYard(yard, minDistance));
     }
 
-    public static int dontGiveMeFive(int start, int end){
+    public static String peacefulYard(String[] yard, int minDistance) {
 
-        int distanciaNumeros = (end -start)+ 1;
-        ArrayList<Integer> numbersArray = new ArrayList<Integer>();
-        int tempValue;
-        for (int index = 0; index < distanciaNumeros; index++) {
-            
-            /* guardamos start en tempvalue para poder guardar el valor original de start
-             * y añadirlo a array numbersArray sino contiene ningún 5.
-             */
-            tempValue = start;
-            while (start % 10 != 5 && start % 10 != -5 && (float) start / 5 != -1 && (float) start / 5 != 1) {
+        int numberCats = findCatsCoordinates(yard).size();
+        String safelyDistanced = "";
+        
+        switch (numberCats) {
+            case 0,1:
+                safelyDistanced = "0 o 1 Gato Encontrados";
+            break;
+            case 2:
+                safelyDistanced = "2 Gatos Encontrados";
+            break;            
+            case 3:
+                safelyDistanced = "3 Gatos Encontrados";
+            break;                  
+            default:
+
+                safelyDistanced = "Sólo Se pueden Encontrar 3 Gatos";
+
+            break;
+        }
+        return safelyDistanced;
+    }
+
+    public static ArrayList<Integer[]> findCatsCoordinates(String[] yard) {
+        
+        ArrayList<Integer[]> catsLocation = new ArrayList<>();
+
+        for (int i = 0; i < yard.length; i++) {
+
+            String[] newCharArray = yard[i].split("");
+
+            for (int j = 0; j < newCharArray.length; j++) {
                 
-                start /=10;
-                if (start == 0){
-                    numbersArray.add(tempValue);
-                    break;
+                if (newCharArray[j].matches(".*[LMR].*")){
+
+                    Integer[] location = {i,j};
+                    catsLocation.add(location);
                 }
             }
-            /*asignamos a start su valor antes de ser modificado dentro del while y sumamos 1 */
-            start = tempValue + 1;
+
         }
-        System.out.println(numbersArray);
-        System.out.println(numbersArray.size());
-        return numbersArray.size();
-    };
+
+
+        return catsLocation;
+    }
 }

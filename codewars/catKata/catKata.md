@@ -6,25 +6,58 @@ If the number of cats in the yard is one or none, or if the distances between al
 
 <!-- https://www.codewars.com/kata/5869848f2d52095be20001d1/train/java -->
 
+Funcion main () {
+
+    String[] yard = {"------------", "------------", "-L----------", "------------", "------------", "------------"};
+    int minDistance = 10
+
+    imprimir en pantalla peacefulYard(yard, minDistance)
+}
+
 Función peacefulYard(String[] yard, int minDistance):
 
-    int numberCats = 0;
+    int numeroGatos = longitud de Función buscarPosicionGatos(yard)
+    boolean distanciadosConSeguridad = false
+
     BÚSQUEDA NÚMERO DE GATOS EN EL JARDÍN
+
+    Si numeroGatos es igual a 1 o 0:
+        devolver true
+    si numeroGatos es igual a 2:
+
+        si calcularDistancia (int[] buscarPosicionGatos(yard)[0], int[] buscarPosicionGatos(yard)[1]) es mayor o igual a minDistance:
+
+            distanciadosConSeguridad = true
+    si numeroGatos es igual a 3:
+
+        si calcularDistancia (int[] buscarPosicionGatos(yard)[0], int[] buscarPosicionGatos(yard)[1]) && calcularDistancia (int[] buscarPosicionGatos(yard)[0], int[] buscarPosicionGatos(yard)[2]) && calcularDistancia (int[] buscarPosicionGatos(yard)[1], int[] buscarPosicionGatos(yard)[2])  sean mayores o igual a minDistance:
+
+            distanciadosConSeguridad = true;
+    Fin si
+
+    devolver distanciadosConSeguridad
+
+Fin Función
+
+
+Funcion buscarPosicionGatos(String[] yard) HECHO
+
+    ArrayList<int[]> posicionGatos
 
     Para i desde 0 hasta longitud de yard - 1:
 
         Para j desde 0 hasta longitud de yard[i] - 1:
 
             Si yard[i][j] es igual a "L","M","R":
-                Incrementar variable numberCats en 1
 
+                posicionGatos.add([i,j])
 
-    Si numberCats es igual a 1:
-        devolver true
-    
-    
+            Fin si
 
-    devolver numberCats
+        Fin si
+
+    Fin Para
+
+    devolver posicionGatos
 
 Fin Función
-

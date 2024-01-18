@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "catKata",
+            "request": "launch",
+            "mainClass": "catKata.catKata",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "reverseArrayUnKnownLengthV2",
             "request": "launch",
             "mainClass": "reversedArray.reverseArrayUnKnownLengthV2",
