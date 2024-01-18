@@ -61,11 +61,11 @@ public class reverseArrayUnKnownLength {
                 
                 if (number/ 10 == 0){
 
-                    reversedNumber[i] = (int) number%10;
+                    reversedNumber[i] = (int) (number%10);
                     return reversedNumber;
                 }
 
-                digitFromNumber = (int) number%10;
+                digitFromNumber = (int) (number%10);
                 number /=10;
                 /* assign isolated digit to its correspondent position 
                 in reversedNumber array*/ 
