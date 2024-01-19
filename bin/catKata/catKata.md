@@ -47,10 +47,12 @@ Funcion buscarPosicionGatos(String[] yard) HECHO
     Para i desde 0 hasta longitud de yard - 1:
 
         Para j desde 0 hasta longitud de yard[i] - 1:
+            
+            String[] nuevoArray = yard[i].split("")
 
-            Si yard[i][j] es igual a "L","M","R":
-
-                posicionGatos.add([i,j])
+            Si nuevoArray contiene a "L","M","R":
+                Integer[] ubicacion = {i,j}
+                posicionGatos.add(ubicacion)
 
             Fin si
 
