@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  * @author manue
  */
-public class Unita1_Activitat3 {
+public class Unitat1_Activitat3 {
 
     /**
      * @param args the command line arguments

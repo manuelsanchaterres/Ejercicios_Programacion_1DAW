@@ -2,13 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package unitat1_activitat6;
 import java.util.Scanner;
 /**
  *
  * @author manue
  */
-public class Unitat1_Activitat6 {
+public class Unitat1_Activitat6_Nou {
     
     /**
      * @param args the command line arguments

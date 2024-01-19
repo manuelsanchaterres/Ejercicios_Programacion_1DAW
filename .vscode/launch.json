@@ -3,6 +3,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Unitat1_Activitat6_Nou",
+            "request": "launch",
+            "mainClass": "Unitat1_Activitat6_Nou",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "Unita1_Activitat3",
+            "request": "launch",
+            "mainClass": "Unita1_Activitat3",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "Unitat1_Activitat4",
+            "request": "launch",
+            "mainClass": "Unitat1_Activitat4",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "Unitat1_Activitat2",
+            "request": "launch",
+            "mainClass": "Unitat1_Activitat2",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "catKata",
             "request": "launch",
             "mainClass": "catKata.catKata",
