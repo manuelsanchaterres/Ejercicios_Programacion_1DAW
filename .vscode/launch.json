@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Pokerhandflush",
+            "request": "launch",
+            "mainClass": "Pokerhandflush.Pokerhandflush",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "Pokerhandflush",
+            "request": "launch",
+            "mainClass": "pokerHandFlush.Pokerhandflush",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "Unitat1_Activitat6_Nou",
             "request": "launch",
             "mainClass": "Unitat1_Activitat6_Nou",

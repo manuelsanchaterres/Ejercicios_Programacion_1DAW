@@ -63,3 +63,18 @@ Funcion buscarPosicionGatos(String[] yard) HECHO
     devolver posicionGatos
 
 Fin Función
+
+Funcion calcularDistancia(Integer[] locationCat1, Integer[] locationCat2)
+
+    // distancia formula  d=√((x2 – x1)² + (y2 – y1)²)
+
+    int x1 = locationCat1[0];
+    int x2 = locationCat2[0];
+    int y1 = locationCat1[1];
+    int y2 = locationCat2[1];
+    int distanceLocations;
+
+    distanciaGatos = √((x2 – x1)² + (y2 – y1)²)
+    devolver distanciaGatos
+
+Fin Función
