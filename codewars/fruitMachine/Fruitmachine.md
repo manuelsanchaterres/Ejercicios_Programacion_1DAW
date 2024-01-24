@@ -19,38 +19,43 @@ LINK: https://www.codewars.com/kata/590adadea658017d90000039/train/java -->
 
 Función fruit(final String[][] reels, final int[] spins):
 	
-	// INICIALIZACIAMOS CONTADOR COINCIDENCIAS AL VALOR RETORNA POR SU FUNCION
+	ArrayList<String> itemsReelCapturados = capturarItemsReel(reels, spins)
+	int totalPuntos = 0;
+	int indiceTabla = -1;
+	int totalCoincidencias = compararItems(itemsReelCapturados);
 	
-	int contadorElementosReelsCoincidentes = Funcion contarNumeroCoincidencias(spins);
-	int puntuacionTotal;
-	// UTILIZAREMOS ESTOS DOS BOOLEANOS PARA DESPUÉS CONDICIONAR EL CÁLCULO DE PUNTUACIÓN FINAL
-	boolean dosIguales = false
-	boolean tresIguales = false;
-	//
+	si totalCoincidencias es igual a 1 entonces:
+		Devolver totalPuntos
+	sino si totalCoincidencias es igual a 2 entonces:
 	
-	Devolver puntuacionTotal
-	
-Fin Función
-
-Función contarNumeroCoincidencias(final int[] spins):
-	
-	// INICIALIZAMOS EN 1 YA QUE UN ITEM CONSIGO MISMO ES COINCIDENCIA
-	int contadorCoincidencias = 1;
-	Para i desde 0 hasta longitud spins - 1:
-		
-		si i es diferente de 0:
-		
-			si elemento i de spins es igual a elemento 0 de spins:
-			
-				incrementamos en 1 el número de coincidencias
-				
-			Fin si
-			
-		Fin si
-		
-	Fin Para	
-	
-	Devolver contadorCoincidencias
+	sino si totalCoincidencias es igual a 3 entonces:
 	
 Fin Función
 
+Función capturarItemsReel(final String[][] reels, final int[] spins):
+	
+	ArrayList <String> itemsReelCapturados;
+	String reelItemCapturado;
+	Para i desde 0 a longitud de reels menos 1:
+		
+		ACCEDEMOS A CADA String ARRAY DE REELS Y DESPUÉS CAPTURAMOS EL VALOR DE LA POSICIÓN I DE SPINS, QUE SERÁ EL INDICE DEL STRING A CAPTURAR EN REELS Y LO ASIGNAMOS A VARIABLE STRING reelItemCapturado
+		AÑADIMOS ITEM CAPTURADO A ARRAYLIST itemsReelCapturados
+		
+		
+	Devolver itemsReelCapturados
+	
+Fin Función
+
+Función compararItems(ArrayList <String> itemsReelCapturados):
+	
+	int numeroCoincidencias = 1;
+
+	Para i desde 1 hasta longitud itemsReelCapturados - 1:
+	
+		si itemsReelCapturados[i] es igual a itemsReelCapturados[0] entonces:
+		
+			incrementamos numeroCoincidencias en 1 unidad
+			
+	Devolver numeroCoincidencias
+			
+Fin Función

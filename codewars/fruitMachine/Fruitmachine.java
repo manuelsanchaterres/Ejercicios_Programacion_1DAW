@@ -1,6 +1,7 @@
 package fruitMachine;
+import java.util.ArrayList;
 import java.util.Arrays;
-public class Fruitmachine {
+class Fruitmachine {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -13,41 +14,62 @@ public class Fruitmachine {
 			new String[]{"Wild", "Star", "Bell", "Shell", "Seven",
                 "Cherry", "Bar", "King", "Queen", "Jack"}};
                 
-		final int[] spins = new int[]{2, 1, 0};
+		final int[] spins = new int[]{1, 2, 0};
 		
-		System.out.println(fruit(reels, spins));
+		int totalScore = fruit(reels, spins);
 	}
 	
 	// fruit function returns total score based on reels item combination
 	
-	public static int fruit(final String[][] reels, final int[] spins) {
+	static int fruit(final String[][] reels, final int[] spins) {
 		
-		int sameReelItemCounter = countSameReelItem(spins);
+		ArrayList <String> capturedReelItems = captureReelItem(reels,spins);
 		int totalScore = 0;
-		
-		boolean twoOfSame = false;
-		boolean threeOfSame = false;
+		int indexScoreTable = -1;
+		int totalMatches = compareItems(capturedReelItems);
+
+		if (totalMatches == 2) {
+			
+			totalScore = 2;
+			
+		}else if (totalMatches == 3) {
+			
+			totalScore = 3;
+			
+		}
 		
 		return totalScore;
 	};
 	
-	public static int countSameReelItem(final int[] spins) {
-			
-		int sameReelItemCounter = 1;
+	static ArrayList<String> captureReelItem (final String[][] reels, final int[] spins){
+		
+		ArrayList <String> capturedReelItems = new ArrayList <String>();
+		String capturedReelItem;
 		
 		for (int i = 0; i < spins.length; i++) {
 			
-			if (i != 0) {
+			capturedReelItem = reels[i][spins[i]];
+			capturedReelItems.add(capturedReelItem);
+			
+		}
+		
+		return capturedReelItems;
+		
+	}
+	
+	static int compareItems(ArrayList <String> capturedReelItems) {
+		
+		int numberMatches = 1;
+		
+		for (int i = 1; i < capturedReelItems.size(); i++) {
+			
+			if (capturedReelItems.get(i).equals(capturedReelItems.get(0))) {
 				
-				if (spins[i] == spins[0]) {
-					
-					sameReelItemCounter++;
-				};
+				numberMatches++;
 			}
 		}
 		
-		
-		
-		return sameReelItemCounter;
-	};
+		return numberMatches;
+	}
+	
 }
