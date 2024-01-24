@@ -1,6 +1,7 @@
 package fruitMachine;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 class Fruitmachine {
@@ -9,15 +10,15 @@ class Fruitmachine {
 		// TODO Auto-generated method stub
 		
 		final String[][] reels = new String[][]{
-			new String[]{"King", "Cherry", "Bar", "Jack", "Seven","Queen", "Star", "Shell", "Bell", "Wild"},
-			new String[]{"Bell", "Seven", "Jack", "Queen", "Bar","Star", "Shell", "Wild", "Cherry", "King"},
-			new String[]{"Wild", "King", "Queen", "Seven", "Star","Bar", "Shell", "Cherry", "Jack", "Bell"}
-			};
+			{"Star", "Seven", "Wild", "Bell", "Cherry", "Shell", "Queen", "King", "Jack", "Bar"},
+			{"Star", "Wild", "Seven", "Shell", "Jack", "Bar", "Cherry", "Bell", "King", "Queen"},
+			{"Cherry", "Bar", "Wild", "Queen", "Seven", "Star", "Shell", "Bell", "King", "Jack"}
+		};
 			
-		//capturedReelItems = {"King","Bell","King"};
-		final int[] spins = new int[]{0, 0, 1};
+		//capturedReelItems = {"King","Bell","Bell"};
+		final int[] spins = new int[]{4, 2, 4};
 		
-		// totalScore 0
+		// totalScore expected 8
 		int totalScore = fruit(reels, spins);
 	}
 	
@@ -69,12 +70,16 @@ class Fruitmachine {
 		
 		int numberMatches = 1;
 		
+		Collections.sort(capturedReelItems);
+		
 		for (int i = 1; i < capturedReelItems.size(); i++) {
 			
-			if (capturedReelItems.get(i).equals(capturedReelItems.get(0))) {
+			if (capturedReelItems.get(i).equals(capturedReelItems.get(i-1))) {
 				
 				numberMatches++;
+				
 			}
+			
 		}
 		
 		
@@ -85,11 +90,12 @@ class Fruitmachine {
 		
 		String repeatedItemReel= "";
 		
+		Collections.sort(capturedReelItems);
 		for (int i = 1; i < capturedReelItems.size(); i++) {
 			
-			if (capturedReelItems.get(i).equals(capturedReelItems.get(0))) { 
+			if (capturedReelItems.get(i).equals(capturedReelItems.get(i-1))) { 
 				repeatedItemReel = capturedReelItems.get(i);
-				
+				return repeatedItemReel;
 			}
 		}
 		
