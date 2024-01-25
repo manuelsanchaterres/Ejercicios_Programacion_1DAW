@@ -6,16 +6,24 @@ public class SnailsCrawlsUp {
     
     public static void main(String[] args) {
         
-      System.out.println(snail(5,10,3));
+      System.out.println(snail(3,2,1));
     }
     
     public static int snail(int column, int day, int night) {
     	
-    	int dailyClimbIncrement = day - night;
+    	int dailyStartingPosition = 0;
+    	int numberDaysTop = 0;
     	
-    	double totalRequiredDaysClimb = (double) column / (double) dailyClimbIncrement;
-    	double roundedTotalRequiredDaysClimb = Math.ceil((double) column / (double) dailyClimbIncrement);
-        return (int) roundedTotalRequiredDaysClimb;
+    	while((dailyStartingPosition+day) < column) {
+    		
+    		dailyStartingPosition += (day - night);
+    		
+    		numberDaysTop++;
+    	}
+    	
+    	numberDaysTop++;
+  
+    	return numberDaysTop;
     }
    
 }
