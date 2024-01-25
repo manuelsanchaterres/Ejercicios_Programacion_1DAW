@@ -1,5 +1,6 @@
 package arrayDiff;
 import java.util.Arrays;
+
 public class Arraydiff {
 
 	public static void main(String[] args) {
@@ -10,46 +11,11 @@ public class Arraydiff {
 	
 	public static int[] arrayDiff(int[] a, int[] b) {
 		
-		int[] arrayA = a;
-		int[] arrayB = b;	
-		int[] newArray = {};
+		int[] filteredA = Arrays.stream(a)
+                .filter(itemArrayA -> Arrays.stream(b).noneMatch(itemArrayB -> itemArrayB == itemArrayA))
+                .toArray();
 		
-		if (b.length == 0) {
-			
-			newArray = a;
-			
-			return newArray;
-		} else if (a.length == 0) {
-		
-			return newArray;			
-		} else {
-			
-			for (int i = 0; i < arrayA.length; i++) {
-				
-				for (int j = 0; j < arrayB.length; j++) {
-					
-					if (arrayA[i] == arrayB[j]) {
-						
-						final int indexToExclude = i;
-						newArray = Arrays.stream(arrayA)
-				                .filter(element -> element != arrayA[indexToExclude]) // Example filter condition (even numbers)
-				                .toArray();
-						
-
-						
-					}
-					
-				}
-				
-				
-			}
-			
-			for (int k = 0; k < newArray.length; k++) {
-				System.out.println(newArray[k]);
-			}
-			
-			return newArray;
-		}
+		return filteredA;
 		
 	}
 	
