@@ -6,7 +6,7 @@ public class SnailsCrawlsUp {
     
     public static void main(String[] args) {
         
-      System.out.println(snail(3,2,1));
+  		snail(3,2,1);
     }
     
     public static int snail(int column, int day, int night) {

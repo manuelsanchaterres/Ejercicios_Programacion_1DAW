@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RegexBasics",
+            "request": "launch",
+            "mainClass": "regexBasics.RegexBasics",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "Pruebas",
+            "request": "launch",
+            "mainClass": "pruebas.Pruebas",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "SnailsCrawlsUp",
+            "request": "launch",
+            "mainClass": "snailCrawlsUp.SnailsCrawlsUp",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "Pokerhandflush",
             "request": "launch",
             "mainClass": "Pokerhandflush.Pokerhandflush",
