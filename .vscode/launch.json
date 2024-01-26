@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Regexbasicshexadecimalnumber",
+            "request": "launch",
+            "mainClass": "regexBasicsHexadecimalNumber.Regexbasicshexadecimalnumber",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "RegexBasics",
             "request": "launch",
             "mainClass": "regexBasics.RegexBasics",
