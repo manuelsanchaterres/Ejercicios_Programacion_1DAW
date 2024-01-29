@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Scramblies",
+            "request": "launch",
+            "mainClass": "scramblies.Scramblies",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "Regexbasicshexadecimalnumber",
             "request": "launch",
             "mainClass": "regexBasicsHexadecimalNumber.Regexbasicshexadecimalnumber",
