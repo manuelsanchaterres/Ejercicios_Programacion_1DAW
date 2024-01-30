@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Productmaximumsarray",
+            "request": "launch",
+            "mainClass": "productMaximumsArray.Productmaximumsarray",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "Scramblies",
             "request": "launch",
             "mainClass": "scramblies.Scramblies",
