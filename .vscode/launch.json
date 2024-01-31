@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Notsorandom",
+            "request": "launch",
+            "mainClass": "notSoRandom.Notsorandom",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "Transformprime",
+            "request": "launch",
+            "mainClass": "transformPrime.Transformprime",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "Productmaximumsarray",
             "request": "launch",
             "mainClass": "productMaximumsArray.Productmaximumsarray",
