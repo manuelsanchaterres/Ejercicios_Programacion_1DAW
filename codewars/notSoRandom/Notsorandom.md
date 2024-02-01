@@ -73,7 +73,7 @@ Fin Función
 
 Funcion HashMap<String,int> addMurbleToMagicHat(magicHat, addedMurble):
 
-    HashMap<String,int> nuevoMagicHat es igual a sumar 1 al valor de la entrada  con clave addedMurble
+    HashMap<String,Integer> nuevoMagicHat es igual a sumar 1 al valor de la entrada  con clave addedMurble
 
     Devolver nuevoMagicHat
 
