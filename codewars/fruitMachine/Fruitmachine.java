@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 class Fruitmachine {
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
