@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Countipaddresses",
+            "request": "launch",
+            "mainClass": "countIpAddresses.Countipaddresses",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "Notsorandom",
             "request": "launch",
             "mainClass": "notSoRandom.Notsorandom",
