@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NumberAndIpAdress",
+            "request": "launch",
+            "mainClass": "numberAndIpAdress.NumberAndIpAdress",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "GoodEvils",
             "request": "launch",
             "mainClass": "goodsEvils.GoodEvils",
