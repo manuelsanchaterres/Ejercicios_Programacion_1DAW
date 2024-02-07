@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SortOdd",
+            "request": "launch",
+            "mainClass": "sortOdd.SortOdd",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "NumberAndIpAdress",
             "request": "launch",
             "mainClass": "numberAndIpAdress.NumberAndIpAdress",
