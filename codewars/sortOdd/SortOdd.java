@@ -38,6 +38,7 @@ class SortOdd {
                 
                 array[oddNumbersIndexes.get(l).getArrayIndex()] = oddNumbersIndexes.get(l).getArrayItemValue();
             }
+            
             return array;
         }   
 

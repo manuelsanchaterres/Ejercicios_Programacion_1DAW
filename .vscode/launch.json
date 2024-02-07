@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "binarySearch.BinarySearch",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "SortOdd",
             "request": "launch",
             "mainClass": "sortOdd.SortOdd",
