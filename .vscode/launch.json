@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CuckooClock",
+            "request": "launch",
+            "mainClass": "cuckooClock.CuckooClock",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "EmotionalSort",
+            "request": "launch",
+            "mainClass": "emotionalSort.EmotionalSort",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "BinarySearch",
             "request": "launch",
             "mainClass": "binarySearch.BinarySearch",
