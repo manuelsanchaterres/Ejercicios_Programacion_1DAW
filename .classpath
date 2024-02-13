@@ -12,5 +12,7 @@
 	<classpathentry kind="src" path="codewars"/>
 	<classpathentry kind="src" path="pruebas"/>
 	<classpathentry kind="src" path="herencia"/>
+	<classpathentry kind="src" path="superClasses"/>
+
 	<classpathentry kind="output" path="bin"/>
 </classpath>

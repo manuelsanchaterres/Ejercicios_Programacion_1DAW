@@ -30,7 +30,7 @@ public class CuckooClock {
             int excedingChimes = currentChimes - chimes;
             
             if (excedingChimes > 3){
-                if (excedingChimes - 3 < hour-- && minutes != 0){
+                if (excedingChimes - 3 < hour && minutes != 0){
                     minutes = 0;
                 }
                 // else if (excedingChimes - 3 > hour-- && minutes == 0){

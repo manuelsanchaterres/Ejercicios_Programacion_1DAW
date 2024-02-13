@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UsoDeSuper",
+            "request": "launch",
+            "mainClass": "usodesuper.UsoDeSuper",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "CuckooClock",
             "request": "launch",
             "mainClass": "cuckooClock.CuckooClock",
