@@ -5,18 +5,18 @@ public class Main {
     public static void main(String[] args) {
         Player player1 = new Player(1, 0);
         Player player2 = new Player(2, 0);
-        int[] moves = { 0, 1, 0, 1, 0, 1, 0 };
+        int[] moves = { 0, 1, 0, 1, 0, 1, 0, 2, 3};
         String[] responses = new String[moves.length];
         int currentPlayer = 1;
-        int movesCounter = 0;
+        int movesCounter = 1;
         int[][] grid = {
 
-            {1,0,0,0,0,0,0},
-            {2,0,0,0,0,0,0},
-            {2,0,0,0,0,0,0},
-            {1,0,0,0,0,0,0},
-            {2,0,0,0,0,0,0},
-            {1,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0},
         };
         for (int i = 0; i < moves.length; i++) {
             
@@ -25,6 +25,11 @@ public class Main {
             if (responses[i].equals("Column full!")){
                 int temp = currentPlayer;
                 currentPlayer = temp;
+            }else if (responses[i].equals("Game has finished!")){
+                for (int j = i+1; j < responses.length; j++) {
+                    responses[j] = "Game has finished!";
+
+                }
             }else {
                 // valid moves counter, excluding column full movements
                 movesCounter++;
