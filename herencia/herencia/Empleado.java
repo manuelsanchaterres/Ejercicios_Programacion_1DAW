@@ -9,7 +9,6 @@ public class Empleado extends Trabajador {
 	public Empleado(String nombre, String puesto, String direccion, String telefono, String nSS, double sueldo, double impuestos) {
 		//OJO "super" en las proximas sesiones
 		super(nombre,puesto, direccion, telefono, nSS);
-	
 		this.sueldo = sueldo;
 		this.impuestos = impuestos;
 	}

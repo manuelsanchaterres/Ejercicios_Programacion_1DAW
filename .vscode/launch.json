@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "connect4.Main",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "EjemploEnum",
+            "request": "launch",
+            "mainClass": "EjemploEnum",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "Connect4",
+            "request": "launch",
+            "mainClass": "connect4.Connect4",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "UsoDeSuper",
             "request": "launch",
             "mainClass": "usodesuper.UsoDeSuper",
