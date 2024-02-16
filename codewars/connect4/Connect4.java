@@ -1,5 +1,7 @@
 package connect4;
 
+import java.util.Arrays;
+
 class Connect4 {
 
     private int currentPlayer;
@@ -65,33 +67,106 @@ class Connect4 {
 
         boolean isWin = false;
 
-        // if (checkHorizontal(grid,column, currentPlayer,lastPlayedGridIndex) || checkVertical(grid,column, currentPlayer,lastPlayedGridIndex) || checkDiagonal(grid,column, currentPlayer,lastPlayedGridIndex)){
-
-        //     isWin = true;
-        // }
-
-        if (checkVertical(grid,column, currentPlayer,lastPlayedGridIndex)){
+        if (checkHorizontal(grid,column, lastPlayedGridIndex) || checkVertical(grid,column, lastPlayedGridIndex)){
 
             isWin = true;
         }
+        
         return isWin;
     }
 
 
-    static boolean checkVertical(int[][] grid, int column,int currentPlayer, int lastPlayedGridIndex){
+    static boolean checkVertical(int[][] grid, int column, int lastPlayedGridIndex){
 
         boolean vertical = true;
+        /*to check vertically, grid row index must be lower o equal to 2 to avoid row
+         * loop out of bounce.
+        */
 
-        for (int i = lastPlayedGridIndex +1; i <= lastPlayedGridIndex +3; i++) {
+        if (lastPlayedGridIndex <=2){
+
+            for (int i = lastPlayedGridIndex +1; i <= lastPlayedGridIndex +3; i++) {
             
-            if (grid[i][column] != grid[lastPlayedGridIndex][column]){
-
-                vertical = false;
-
+                if (grid[i][column] != grid[lastPlayedGridIndex][column]){
+    
+                    vertical = false;
+    
+                }
             }
         }
+
         return vertical;
     }
+
+    static boolean checkHorizontal(int[][] grid, int column,int lastPlayedGridIndex){
+
+        boolean horizontal = false;
+        // counting the current inserted disc as the first matching disc
+        int consecutiveDiscs = 1;
+        if (lastPlayedGridIndex == 0){
+
+            consecutiveDiscs = checkRightHorizontalSide(grid,lastPlayedGridIndex, column);
+
+        }else if (lastPlayedGridIndex == 6){
+            consecutiveDiscs = checkLeftHorizontalSide(grid,lastPlayedGridIndex, column);
+        }
+        else{
+
+            checkBothHorizontalSides(grid,lastPlayedGridIndex, column);
+
+        }
+
+        if (consecutiveDiscs == 4){
+
+            horizontal = true;
+        }
+
+        return horizontal;
+    }
+
+    static int checkLeftHorizontalSide(int[][] grid, int lastPlayedGridIndex, int column){
+        int consecutiveDiscs = 1;
+        for (int i = lastPlayedGridIndex+ 1; i <= lastPlayedGridIndex +3; i--) {
+            
+            if (grid[lastPlayedGridIndex][i] == grid[lastPlayedGridIndex][column]){
+
+                consecutiveDiscs++;
+            }
+        }
+
+        return consecutiveDiscs;
+    }
+    static int checkBothHorizontalSides(int[][] grid, int lastPlayedGridIndex, int column){
+        int consecutiveDiscs = 1;
+        int [] currentRow = grid[lastPlayedGridIndex];
+        int [] subStringLeft = Arrays.copyOfRange(currentRow, 0, grid[lastPlayedGridIndex][column+1]);
+        
+        // check left current player disc side
+
+        for (int i = subStringLeft.length-1; i > 0; i--) {
+            
+            if (subStringLeft[i] == subStringLeft[i-1]){
+
+                consecutiveDiscs++;
+            }
+        }
+
+        return consecutiveDiscs;
+    }
+
+    static int checkRightHorizontalSide(int[][] grid, int lastPlayedGridIndex, int column){
+        int consecutiveDiscs = 1;
+        for (int i = lastPlayedGridIndex- 1; i <= lastPlayedGridIndex -3; i--) {
+            
+            if (grid[lastPlayedGridIndex][i] == grid[lastPlayedGridIndex][column]){
+
+                consecutiveDiscs++;
+            }
+        }
+
+        return consecutiveDiscs;
+    }
+
 
 
 

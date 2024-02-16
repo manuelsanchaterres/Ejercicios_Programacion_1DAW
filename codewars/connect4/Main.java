@@ -5,7 +5,10 @@ public class Main {
     public static void main(String[] args) {
         Player player1 = new Player(1, 0);
         Player player2 = new Player(2, 0);
-        int[] moves = { 0, 1, 0, 1, 0, 1, 0, 2, 3};
+        // moves combination for player1 to vertically win
+        // int[] moves = { 0, 1, 0, 1, 0, 1, 0};
+        // moves combination for player2 to horizontally win
+        int[] moves = { 0, 1, 0, 2, 0, 3, 1, 4};
         String[] responses = new String[moves.length];
         int currentPlayer = 1;
         int movesCounter = 1;

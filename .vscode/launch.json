@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "basicEncryption",
+            "request": "launch",
+            "mainClass": "basicEncryption.basicEncryption",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "connect4.Main",
