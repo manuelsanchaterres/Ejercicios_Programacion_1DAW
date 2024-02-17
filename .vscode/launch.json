@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ValidatePinCode",
+            "request": "launch",
+            "mainClass": "validatePinCode.ValidatePinCode",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "EncryptThis",
             "request": "launch",
             "mainClass": "EncryptThis.EncryptThis",
