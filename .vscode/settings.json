@@ -13,7 +13,8 @@
         "Unitat1_Activitat2"
     ],
     "java.project.referencedLibraries": [
-        "lib/junit-platform-console-standalone-1.7.0-all.jar",
+        "lib/junit-jupiter-api-5.10.2.jar",
+        "lib/junit-jupiter-engine-5.10.2.jar",
     ],
     "java.debug.settings.onBuildFailureProceed": true,
     "java.dependency.packagePresentation": "hierarchical",

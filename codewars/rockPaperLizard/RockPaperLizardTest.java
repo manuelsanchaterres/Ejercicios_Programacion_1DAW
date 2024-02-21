@@ -2,7 +2,7 @@ package rockPaperLizard;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RockPaperLizardTest {
-    @Test void player1Wins() {
+      @Test void player1Wins() {
         assertEquals("Player 1 Won!", RockPaperLizard.rpsls("rock", "lizard"));
         assertEquals("Player 1 Won!", RockPaperLizard.rpsls("paper", "rock"));
         assertEquals("Player 1 Won!", RockPaperLizard.rpsls("scissors", "lizard"));

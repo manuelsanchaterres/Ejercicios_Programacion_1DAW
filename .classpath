@@ -15,6 +15,7 @@
 	<classpathentry kind="src" path="superClasses"/>
 	<classpathentry kind="src" path="enumerados"/>
 	<classpathentry kind="src" path="jUnitTestPractice"/>
-	<classpathentry kind="lib" path="lib/junit-platform-console-standalone-1.7.0-all.jar" sourcepath="lib/junit-platform-console-standalone-1.7.0-all.jar"/>
+	<classpathentry kind="lib" path="lib/junit-jupiter-api-5.10.2.jar" sourcepath="lib/junit-jupiter-api-5.10.2.jar"/>
+	<classpathentry kind="lib" path="lib/junit-jupiter-engine-5.10.2.jar" sourcepath="lib/junit-jupiter-engine-5.10.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

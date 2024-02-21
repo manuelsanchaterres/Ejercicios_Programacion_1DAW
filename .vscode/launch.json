@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PascalTriangle",
+            "request": "launch",
+            "mainClass": "pascalTriangle.PascalTriangle",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "RockPaperLizard",
             "request": "launch",
             "mainClass": "rockPaperLizard.RockPaperLizard",
