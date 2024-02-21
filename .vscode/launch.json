@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RockPaperLizard",
+            "request": "launch",
+            "mainClass": "rockPaperLizard.RockPaperLizard",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "WalkingHallway",
             "request": "launch",
             "mainClass": "walkingHallway.WalkingHallway",
