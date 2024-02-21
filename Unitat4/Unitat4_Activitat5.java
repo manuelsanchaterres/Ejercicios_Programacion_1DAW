@@ -35,7 +35,7 @@ public class Unitat4_Activitat5 {
 
         System.out.print("Format d'hora correcte: ");
 
-
+        input.close();
     }
 
     static boolean isValidHores (int hores, int minuts, int segons) {

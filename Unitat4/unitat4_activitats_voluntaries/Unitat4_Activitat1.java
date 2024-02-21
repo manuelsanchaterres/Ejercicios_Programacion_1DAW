@@ -24,7 +24,7 @@ public class Unitat4_Activitat1 {
         }
 
         calculSuperFicieAreaEsfera(radi);
-
+        input.close();
     }
 
     /* Cada funcion se declara dentro de la clase y fuera de main */

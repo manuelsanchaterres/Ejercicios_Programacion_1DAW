@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "WalkingHallway",
+            "request": "launch",
+            "mainClass": "walkingHallway.WalkingHallway",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "ValidatePinCode",
             "request": "launch",
             "mainClass": "validatePinCode.ValidatePinCode",

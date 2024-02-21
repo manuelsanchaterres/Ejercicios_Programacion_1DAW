@@ -20,7 +20,7 @@ public class Unitat4_Activitat2 {
         System.out.print("Introdueix valor y2: ");
         y2 = input.nextDouble();
         System.out.println(distancia(x1,y1,x2,y2));
-
+        input.close();
     
     }
 

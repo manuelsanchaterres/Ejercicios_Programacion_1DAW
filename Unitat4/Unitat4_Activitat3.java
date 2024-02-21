@@ -51,7 +51,7 @@ public class Unitat4_Activitat3 {
 
         }
 
-
+        input.close();
     
     }
 

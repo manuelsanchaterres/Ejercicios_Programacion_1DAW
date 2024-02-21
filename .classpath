@@ -14,5 +14,7 @@
 	<classpathentry kind="src" path="herencia"/>
 	<classpathentry kind="src" path="superClasses"/>
 	<classpathentry kind="src" path="enumerados"/>
+	<classpathentry kind="src" path="jUnitTestPractice"/>
+	<classpathentry kind="lib" path="lib/junit-platform-console-standalone-1.7.0-all.jar" sourcepath="lib/junit-platform-console-standalone-1.7.0-all.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

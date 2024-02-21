@@ -23,7 +23,7 @@ public class Unitat4_Activitat2 {
         numero2 = input.nextInt();
 
         mostrarNumerosOrdenados(numero1, numero2);
-
+        input.close();
     
     }
 

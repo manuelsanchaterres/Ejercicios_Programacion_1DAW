@@ -26,7 +26,7 @@ public class Unitat4_Activitat4 {
         nombre2 = input.nextFloat();
 
         System.out.println(valorMaxim(nombre1, nombre2));
-    
+        input.close();
     }
 
     static float valorMaxim(float nombre1, float nombre2) {
