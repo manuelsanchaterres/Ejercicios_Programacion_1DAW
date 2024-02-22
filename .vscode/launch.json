@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SquareDigits",
+            "request": "launch",
+            "mainClass": "squareDigits.SquareDigits",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "LengthMissingArray",
             "request": "launch",
             "mainClass": "lengthMissingArray.LengthMissingArray",
