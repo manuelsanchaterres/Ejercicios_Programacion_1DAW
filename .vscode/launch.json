@@ -3,6 +3,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "convertHexToRGB",
+            "request": "launch",
+            "mainClass": "convertHexToRGB.convertHexToRGB",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "pruebas",
+            "request": "launch",
+            "mainClass": "countDivisibleNumbers.pruebas",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "CountDivisibleNumbers",
+            "request": "launch",
+            "mainClass": "countDivisibleNumbers.CountDivisibleNumbers",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
+            "name": "MexicanWave",
+            "request": "launch",
+            "mainClass": "mexicanWave.MexicanWave",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "SquareDigits",
             "request": "launch",
             "mainClass": "squareDigits.SquareDigits",
