@@ -8,7 +8,7 @@ public class convertHexToRGB {
     }
 
     public static HashMap<String, Integer> hexStringToRGB(String hex) {
-        
+        long start1 = System.nanoTime();
         // hash table to store correlation between hexadecimal and their correspondent decimal value
         HashMap<String,Integer> hexDecimalValuesTable = new HashMap<String,Integer>();
         hexDecimalValuesTable = fillHashHexadecimalsTable(hexDecimalValuesTable);
@@ -28,7 +28,8 @@ public class convertHexToRGB {
         finalRGBHashMap.put("g", convertToDecimal(binaryConvertedValues[2],binaryConvertedValues[3]));
         finalRGBHashMap.put("b", convertToDecimal(binaryConvertedValues[4],binaryConvertedValues[5]));
         // hex -> {r, g, b}
-        
+        long end1 = System.nanoTime();
+        System.out.println("Elapsed Time in milliseconds: "+ (end1-start1)/Math.pow(10,6));
         return finalRGBHashMap;
     }
 
@@ -56,7 +57,6 @@ public class convertHexToRGB {
     static String convertToBinary (int decimalValue){
 
         String binaryValue = "";
-        System.out.println(decimalValue);
         while (decimalValue > 0){
 
             binaryValue += decimalValue % 2;

@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "pruebas1",
+            "request": "launch",
+            "mainClass": "countDivisibleNumbers.pruebas1",
+            "projectName": "Ejercicios Programacion 1 DAW"
+        },
+        {
+            "type": "java",
             "name": "convertHexToRGB",
             "request": "launch",
             "mainClass": "convertHexToRGB.convertHexToRGB",
